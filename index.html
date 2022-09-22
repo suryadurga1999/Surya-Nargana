@@ -51,11 +51,20 @@
                 text-transform: uppercase;
                 font-weight: bold;
             }
+                 #preloader{ 
+            background: #000 url(images/loader.gif) no-repeat center center;
+            background-size: 15%;
+            height: 100vh;
+            width:100%;
+            position: fixed;
+            z-index: 100;
+        }
         </style>
     
 </head>
 
 <body>
+        <div id="preloader"></div>
     <div class="title">SURYA</div>
     <div>
         <div class="container">
@@ -189,6 +198,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
+    <script> 
+var loader = document.getElementById("preloader");
+window.addEventListener("load",  function(){ 
+    loader.style.display = "none";
+})
+
+
+</script>
 </body>
 
 </html>
